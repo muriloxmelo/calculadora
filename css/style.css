@@ -1,0 +1,137 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+
+html,
+body {
+  height: 100%;
+  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#calculadora {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.25rem;
+}
+
+#calculadora button {
+  padding: 20px 30px;
+  border: none;
+  background-color: #3b3b3b;
+  border-radius: 5px;
+  color: #e6e6e6;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#calculadora .darker {
+  background-color: #323232;
+}
+
+#calculadora .darker:hover {
+  background-color: #3c3c3c;
+}
+
+#calculadora button:last-child {
+  background: #76b9ed;
+  color: #213442;
+  grid-column: span 2;
+}
+
+#calculadora button:last-child:hover {
+  background: #6da9d8;
+}
+
+#calculadora button:hover {
+  background-color: #323232;
+}
+
+.calculadora-bg {
+  background-color: #202020;
+  padding: 4px;
+  border: 1px solid #383636;
+  box-shadow: rgba(0, 0, 0, 100);
+}
+
+.numb-display {
+  color: #fff;
+  text-align: right;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.conta {
+  color: #878787;
+  text-align: right;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.top p {
+  position: relative;
+  font-size: 0.5rem;
+  margin-left: 1rem;
+  color: white;
+}
+
+.top p::before {
+  content: "";
+  display: inline-block;
+  background-image: url(../calculator.svg);
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: -16px;
+  top: -4px;
+}
+
+.top-icons {
+  color: #858585;
+  display: flex;
+}
+
+.top-icons div {
+  padding: .5rem 1rem;
+}
+
+.top-icons div:last-child:hover {
+  background-color: #E81123;
+}
+
+.top-icons div:hover {
+  background-color: #363636;
+  color: #fff;
+}
+
+.menus-icon {
+  border-bottom: 4px solid transparent;
+}
+
