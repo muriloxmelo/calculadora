@@ -4,7 +4,7 @@
 }
 
 html {
-  font-family: "Nanum Gothic", sans-serif;
+  font-family: "Segoe UI"
 }
 
 
@@ -31,17 +31,17 @@ ul {
 #calculadora {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0.25rem;
+  gap: 2px;
 }
 
 #calculadora button {
-  padding: 20px 30px;
+  padding: 12px 24px;
   border: none;
   background-color: #3b3b3b;
   border-radius: 5px;
   color: #e6e6e6;
-  font-weight: bold;
   cursor: pointer;
+  font-size: 1rem;
 }
 
 #calculadora .darker {
@@ -97,7 +97,7 @@ ul {
 
 .top p {
   position: relative;
-  font-size: 0.5rem;
+  font-size: 12px;
   margin-left: 1rem;
   color: white;
 }
@@ -110,7 +110,6 @@ ul {
   height: 16px;
   position: absolute;
   left: -16px;
-  top: -4px;
 }
 
 .top-icons {
