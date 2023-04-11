@@ -4,9 +4,8 @@
 }
 
 html {
-  font-family: "Segoe UI"
+  font-family: "Noto Sans", sans-serif;
 }
-
 
 html,
 body {
@@ -76,7 +75,7 @@ ul {
 .numb-display {
   color: #fff;
   text-align: right;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 2.5rem;
   margin-bottom: 2rem;
 }
@@ -118,11 +117,11 @@ ul {
 }
 
 .top-icons div {
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .top-icons div:last-child:hover {
-  background-color: #E81123;
+  background-color: #e81123;
 }
 
 .top-icons div:hover {
@@ -133,4 +132,3 @@ ul {
 .menus-icon {
   border-bottom: 4px solid transparent;
 }
-
