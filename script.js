@@ -36,7 +36,7 @@ function limparPrincipal() {
   arrayDisplay = [];
 }
 
-let testando = [];
+let arrayAfter = [];
 let maluco = "";
 function operacoes(e) {
   let operadorClicado = e.currentTarget.innerText;
@@ -47,7 +47,7 @@ function operacoes(e) {
   displayEquacao.innerText += equacaoDisplay;
   return (
     (maluco = displayPrincipal.innerText),
-    (testando = arrayDisplay),
+    (arrayAfter = arrayDisplay),
     (arrayDisplay = [])
   );
 }
@@ -70,13 +70,15 @@ equal.addEventListener("click", mostrarResultado);
 
 function apagarBack(e) {
   arrayDisplay.pop();
-  testando.pop();
+  arrayAfter.pop();
   if (displayPrincipal.innerText === String(displayResultado)) {
     (displayPrincipal.innerText = "0"), (arrayDisplay = []);
   } else if (arrayDisplay.length > 0) {
-    return (displayPrincipal.innerText = arrayDisplay.join(""));
-  } else if (testando.length > 0) {
-    return (displayPrincipal.innerText = testando.join(""));
+    return (
+      (displayPrincipal.innerText = arrayDisplay.join("")), (arrayAfter = [])
+    );
+  } else if (arrayAfter.length > 0) {
+    return (displayPrincipal.innerText = arrayAfter.join(""));
   } else displayPrincipal.innerText = "0";
 }
 
