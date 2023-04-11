@@ -5,11 +5,10 @@ const clear = document.querySelectorAll(".clear");
 const equal = document.querySelector(".equal");
 const operator = document.querySelectorAll(".operador");
 
-const doido = "0";
-
+let testando = "";
 function mostrarDisplay(event) {
-  const tecla = event.target.innerText;
-  if (displayPrincipal.innerText === doido) {
+  let tecla = event.target.innerText;
+  if (displayPrincipal.innerText === "0") {
     displayPrincipal.innerText = "";
   } else if (displayPrincipal.innerText === String(displayResultado)) {
     displayPrincipal.innerText = "";
@@ -17,6 +16,7 @@ function mostrarDisplay(event) {
     displayPrincipal.innerText = "";
   }
   displayPrincipal.innerText += tecla;
+  return (maluco = "0");
 }
 
 numbers.forEach((i) => {
