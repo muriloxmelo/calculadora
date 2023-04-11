@@ -4,11 +4,14 @@ const numbers = document.querySelectorAll(".number");
 const clear = document.querySelectorAll(".clear");
 const equal = document.querySelector(".equal");
 const operator = document.querySelectorAll(".operador");
+const backspace = document.querySelector(".backspace");
 
-let testando = "";
+let arrayDisplay = [];
 function mostrarDisplay(event) {
   let tecla = event.target.innerText;
-  if (displayPrincipal.innerText === "0") {
+  if (displayPrincipal.innerText === undefined) {
+    displayPrincipal.innerText = "0";
+  } else if (displayPrincipal.innerText === "0") {
     displayPrincipal.innerText = "";
   } else if (displayPrincipal.innerText === String(displayResultado)) {
     displayPrincipal.innerText = "";
@@ -16,7 +19,7 @@ function mostrarDisplay(event) {
     displayPrincipal.innerText = "";
   }
   displayPrincipal.innerText += tecla;
-  return (maluco = "0");
+  return (maluco = "0"), arrayDisplay.push(tecla);
 }
 
 numbers.forEach((i) => {
@@ -30,6 +33,7 @@ clear.forEach((i) => {
 function limparPrincipal() {
   displayPrincipal.innerText = "0";
   displayEquacao.innerText = "";
+  arrayDisplay = [];
 }
 
 let maluco = "";
@@ -58,3 +62,14 @@ function mostrarResultado(e) {
 }
 
 equal.addEventListener("click", mostrarResultado);
+
+function apagarBack(e) {
+  arrayDisplay.pop();
+  if (displayPrincipal.innerText === String(displayResultado)) {
+    (displayPrincipal.innerText = "0"), (arrayDisplay = []);
+  } else if (arrayDisplay.length - 1 >= 0) {
+    return (displayPrincipal.innerText = arrayDisplay.join(""));
+  } else displayPrincipal.innerText = "0";
+}
+
+backspace.addEventListener("click", apagarBack);
