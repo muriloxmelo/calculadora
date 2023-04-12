@@ -1,9 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-}
-
-html {
+  box-sizing: border-box;
   font-family: "Noto Sans", sans-serif;
 }
 
@@ -70,6 +68,7 @@ ul {
   padding: 4px;
   border: 1px solid #383636;
   box-shadow: rgba(0, 0, 0, 100);
+  max-width: 300px;
 }
 
 .numb-display {
@@ -78,13 +77,18 @@ ul {
   font-weight: 600;
   font-size: 2.5rem;
   margin-bottom: 2rem;
+  overflow-wrap: break-word;
 }
+
+
 
 .conta {
   color: #878787;
   text-align: right;
   font-size: 1rem;
   margin-bottom: 0.5rem;
+  min-height: 1.5rem;
+  overflow-wrap: break-word;
 }
 
 .top {
